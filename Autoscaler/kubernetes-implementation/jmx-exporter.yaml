@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jmx-service
+spec:
+  selector:
+    app: jmxexporter
+  ports:
+  - port: 5556
+    targetPort: 5556
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jmxexporter-deployment
+spec:
+  selector:
+    matchLabels:
+      app: jmxexporter
+  template:
+    metadata:
+      labels:
+        app: jmxexporter
+    spec:
+      containers:
+      - name: jmxexporter
+        image: djazulu/jmx-exporter:latest
+        env:
+        - name: SERVICE_PORT
+          value: "5556"
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "0.1"
+        ports:
+        - containerPort: 5556

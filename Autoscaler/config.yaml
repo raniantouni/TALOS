@@ -1,0 +1,12 @@
+apiVersion: v1
+clusters:
+  - cluster:
+      server: https://146.148.4.219
+      clusterDNS:  https://146.148.4.219/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+    name: kubernetes
+contexts:
+  - context:
+      cluster: kubernetes
+      user: default
+    name: default
+current-context: default

@@ -1,0 +1,1 @@
+1. Contains all the .yaml files for creating the neccessary pods and services for the kubernetes cluster
