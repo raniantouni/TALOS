@@ -1,0 +1,6 @@
+confluent-kafka==1.8.2
+tqdm
+pandas
+matplotlib
+numpy
+seaborn
