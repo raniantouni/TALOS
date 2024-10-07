@@ -7,6 +7,7 @@ Before deploying TALOS, ensure you have the following:
 - Kubernetes cluster
 - `kubectl` configured for your cluster
 - Helm 3
+- Java 11
 
 
 ## Deployment Steps
@@ -64,6 +65,7 @@ Before deploying TALOS, ensure you have the following:
 ### Step 6:  Run Autoscaler 
 
 
-Execute main
+        java -jar Autoscaler/Autoscaler-1.0-SNAPSHOT.jar
+
 
 
