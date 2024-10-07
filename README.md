@@ -1,8 +1,9 @@
 # TALOS
+TALOS is a task autoscaler designed to optimize the performance of Apache Flink jobs while minimizing cloud infrastructure costs. It dynamically adjusts the parallelism of tasks in real-time based on workload fluctuations. TALOS is built to operate on the Google Cloud Platform (GCP) and utilizes Prometheus for monitoring metrics.
 
 ## Prerequisites
 
-
+Before deploying TALOS, ensure you have the following:
 - Kubernetes cluster
 - `kubectl` configured for your cluster
 - Helm 3
